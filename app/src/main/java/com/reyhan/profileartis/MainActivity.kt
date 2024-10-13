@@ -2,13 +2,17 @@ package com.reyhan.profileartis
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.reyhan.profileartis.model.Article
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.setTitle("10 Model Indonesia");
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.title = "10 Model Indonesia"
 
         val orientation = resources.configuration.orientation
 
